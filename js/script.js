@@ -49,6 +49,14 @@ $(function () {
         );
         distanceTag.appendChild(distanceText);
         document.getElementById("content").appendChild(distanceTag);
+
+        var km = distance / 1000;
+        var kmTag = document.createElement("p");
+        var kmText = document.createTextNode(
+            "You have traveled " +  km.toFixed(1) + " km since your last visit."
+        );
+        kmTag.appendChild(kmText);
+        document.getElementById("content").appendChild(kmTag);
       } else {
         document.getElementById("welcomeMessage").innerHTML =
           "Welcome to the page for the first time!";
